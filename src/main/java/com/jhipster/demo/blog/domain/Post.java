@@ -31,7 +31,7 @@ public class Post implements Serializable {
     @Column(name = "title", nullable = false)
     private String title;
 
-    @Lob
+    @org.hibernate.annotations.JdbcTypeCode(org.hibernate.type.SqlTypes.LONGVARCHAR)
     @Column(name = "content", nullable = false)
     private String content;
 
