@@ -639,7 +639,15 @@
                             </platforms>
                         </from>
                         <to>
-                            <image>blog:latest</image>
+                            <image>federicopalumbo294/isa-blog:latest</image>
+                            <tags>
+                                <tag>${project.version}</tag>
+                                <tag>latest</tag>
+                            </tags>
+                            <auth>
+                                <username>${env.DOCKER_REGISTRY_USER}</username>
+                                <password>${env.DOCKER_REGISTRY_PWD}</password>
+                            </auth>
                         </to>
                         <container>
                             <entrypoint>
